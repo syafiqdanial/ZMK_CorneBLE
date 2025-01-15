@@ -5,7 +5,7 @@
  */
 
 #define ZMK_POINTING_DEFAULT_MOVE_VAL 1500  // default: 600
-#define ZMK_POINTING_DEFAULT_SCRL_VAL 20    // default: 10
+#define ZMK_POINTING_DEFAULT_SCRL_VAL 50    // default: 10
 
 #include <behaviors.dtsi>
 #include <dt-bindings/zmk/keys.h>
@@ -46,36 +46,6 @@ behaviors {
             #binding-cells = <0>;
             bindings
                 = <&macro_tap &kp DQT &kp DQT>;
-         };
-        
-         winleft: winleft {
-            label= "winleft";
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings
-                = <&macro_press &kp LGUI &kp LCTRL>, 
-                <&macro_tap &kp LEFT>,
-                <&macro_release &kp LGUI &kp LCTRL>;
-         };
-        
-         winright: winright {
-            label= "winright";
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings
-                = <&macro_press &kp LGUI &kp LCTRL>, 
-                <&macro_tap &kp RIGHT>,
-                <&macro_release &kp LGUI &kp LCTRL>;
-         };
-        
-         taskview: taskview {
-            label= "taskview";
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings
-                = <&macro_press &kp LGUI>, 
-                <&macro_tap &kp TAB>,
-                <&macro_release &kp LGUI>;
          };
       };
       
